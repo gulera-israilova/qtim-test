@@ -23,6 +23,10 @@ docker compose -f docker-compose.yaml up -d --build --force-recreate --remove-or
    ```bash
   npm run start:dev
   ```
+4.  Тестирование:
+   ```bash
+  npm run test
+  ```
 
 Создайте файл .env на основе примера .env.example
 
