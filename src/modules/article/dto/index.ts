@@ -48,3 +48,34 @@ export class UpdateArticleDto {
   @IsOptional()
   description?: string;
 }
+
+export class ArticleDto {
+  @ApiProperty({
+    example: '9a0e516f-9e79-4ddf-8792-01a57776a7e6',
+    description: 'Article ID',
+  })
+  id: string;
+
+  @ApiProperty({
+    example: 'Title',
+    description: 'Article title',
+  })
+  title: string;
+
+  @ApiProperty({
+    example: 'Description',
+    description: 'Article description',
+  })
+  description: string;
+}
+
+export class GetArticlesResponseDto {
+  @ApiProperty({ type: [ArticleDto] })
+  data: string;
+
+  @ApiProperty({
+    example: 10,
+    description: 'Articles total number',
+  })
+  total: number;
+}

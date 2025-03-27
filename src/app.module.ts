@@ -11,6 +11,7 @@ import { AuthMiddleware } from './utils/auth.middleware';
 import { JwtService } from '@nestjs/jwt';
 import { AuthModule } from './modules/auth/auth.module';
 import { ArticleModule } from './modules/article/article.module';
+import { RedisModule } from './redis/redis.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { ArticleModule } from './modules/article/article.module';
     TypeOrmModule.forFeature(entities),
     AuthModule,
     ArticleModule,
+    RedisModule,
   ],
   controllers: [],
   providers: [JwtService],
